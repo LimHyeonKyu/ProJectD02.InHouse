@@ -8,11 +8,14 @@ public class getButtonIndex : MonoBehaviour {
 
     public ButtonManager bm;
     public UpDownBtn udb;
+    public GameObject nameLabel; 
 
     private void Start()
     {
         bm = GameObject.Find("BtnManager").GetComponent<ButtonManager>();
         udb = GameObject.Find("BtnManager").GetComponent<UpDownBtn>();
+        nameLabel = GameObject.Find("MainLevel");
+        nameLabel.GetComponent<UILabel>().text = "LV " +LevelManager.instanCe.lv[0].ToString()+" "+bm.unitName[0];
     }
 
     void OnClick()
@@ -22,7 +25,14 @@ public class getButtonIndex : MonoBehaviour {
         bm.selector.transform.position = gameObject.transform.position;     //선택 하이라이터를 이동
 
         bm.target = gameObject;     //누른 버튼을 타겟으로 지정
-
+        for (int r= 0; r < MoneyManager.inStance.reinFoceValue.Length; r++)
+        {
+            if (bm.target == bm.buttons[r])
+            {
+                MoneyManager.inStance.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[r]);
+                nameLabel.GetComponent<UILabel>().text = "LV "+LevelManager.instanCe.lv[r].ToString()+" "+bm.unitName[r]; 
+            }
+        }
         //UILabel uILabel = gameObject.GetComponentInChildren<UILabel>();             
         //string str = uILabel.text;
         //LevelManager.instanCe.lv[0] = Convert.ToInt32(str);       //타겟의 자식개체의 라벨을 가져와 정수로 변환해 지정

@@ -6358,6 +6358,16 @@ MonoBehaviour:
   - {fileID: 1774344420}
   selector: {fileID: 337143495}
   target: {fileID: 0}
+  unitName:
+  - Prinny
+  - Lime
+  - Kum
+  - Slime
+  - WoodGolem
+  - Felynn
+  - Buste
+  - Succubus
+  - Guardian
 --- !u!1 &797940070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6686,11 +6696,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027e47327cf683c498e09a3f13ff06e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCount: 1500
-  soulCount: 100
-  reinFoceValue: 0
+  goldCount: 5000
+  soulCount: 500
+  reinFoceValue:
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
   goldLabel: {fileID: 0}
   soulLabel: {fileID: 0}
+  gdCostLB: {fileID: 0}
 --- !u!1 &832928313
 GameObject:
   m_ObjectHideFlags: 0
@@ -7796,7 +7816,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3009
+  startingRenderQueue: 3010
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -10100,7 +10120,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3014
+  startingRenderQueue: 3015
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -11631,7 +11651,7 @@ GameObject:
   - component: {fileID: 1508343682}
   - component: {fileID: 1508343683}
   m_Layer: 8
-  m_Name: Label (1)
+  m_Name: LabelCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11691,7 +11711,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
   mFont: {fileID: 0}
-  mText: 100
+  mText: 
   mFontSize: 40
   mFontStyle: 1
   mAlignment: 0
@@ -13520,19 +13540,19 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 0.5586207, b: 0, a: 1}
   mPivot: 4
-  mWidth: 264
+  mWidth: 310
   mHeight: 60
   mDepth: 5
-  mMat: {fileID: 2100000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mMat: {fileID: 2100000, guid: fe913b44b0b336c469532bc186bfe260, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.4
+  aspectRatio: 5.1666665
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: fe913b44b0b336c469532bc186bfe260, type: 3}
   mFont: {fileID: 0}
   mText: LV 1 Goblin
-  mFontSize: 80
+  mFontSize: 60
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -13540,7 +13560,7 @@ MonoBehaviour:
   mEffectStyle: 2
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mOverflow: 0
   mApplyGradient: 1
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}

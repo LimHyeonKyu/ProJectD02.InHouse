@@ -29,11 +29,12 @@ public class UpDownBtn : MonoBehaviour {
             { 
                 if (LevelManager.instanCe.lv[i] <= 10)
                 {
-                    if (MoneyManager.inStance.reinFoceValue <= MoneyManager.inStance.goldCount && MoneyManager.inStance.goldCount >= 0)
+                    if (MoneyManager.inStance.reinFoceValue[i] <= MoneyManager.inStance.goldCount && MoneyManager.inStance.goldCount >= 0)
                     //강화값이 MoneyManager 싱글톤의 골드값보다 작거나 같은경우와 MoneyManager 싱글톤 골드값이 0보다 크거나 같을경우 강화시킨다
                     {
-                        MoneyManager.inStance.goldCount -= MoneyManager.inStance.reinFoceValue;
-                        MoneyManager.inStance.reinFoceValue *= 2;
+                        MoneyManager.inStance.goldCount -= MoneyManager.inStance.reinFoceValue[i];
+                        MoneyManager.inStance.reinFoceValue[i] *= 2;
+                        MoneyManager.inStance.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[i]);
                         LevelManager.instanCe.lv[i] += 1;
                     }
                 }
