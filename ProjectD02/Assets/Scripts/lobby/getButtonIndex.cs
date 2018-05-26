@@ -8,14 +8,13 @@ public class getButtonIndex : MonoBehaviour {
 
     public ButtonManager bm;
     public UpDownBtn udb;
-    public GameObject nameLabel; 
-
+    public GameObject nameLabel;
     private void Start()
     {
         bm = GameObject.Find("BtnManager").GetComponent<ButtonManager>();
         udb = GameObject.Find("BtnManager").GetComponent<UpDownBtn>();
         nameLabel = GameObject.Find("MainLevel");
-        nameLabel.GetComponent<UILabel>().text = "LV " +LevelManager.instanCe.lv[0].ToString()+" "+bm.unitName[0];
+        nameLabel.GetComponent<UILabel>().text =bm.unitName[0];
     }
 
     void OnClick()
@@ -29,8 +28,14 @@ public class getButtonIndex : MonoBehaviour {
         {
             if (bm.target == bm.buttons[r])
             {
+                bm.anitarget = bm.unitIdle[r];
+                if(bm.anitarget==bm.unitIdle[r])
+                {
+                    bm.unitIdle[r].SetActive(true);
+                    bm.unitOn[r] = true;
+                }
                 MoneyManager.inStance.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[r]);
-                nameLabel.GetComponent<UILabel>().text = "LV "+LevelManager.instanCe.lv[r].ToString()+" "+bm.unitName[r]; 
+                nameLabel.GetComponent<UILabel>().text =bm.unitName[r]; 
             }
         }
         //UILabel uILabel = gameObject.GetComponentInChildren<UILabel>();             

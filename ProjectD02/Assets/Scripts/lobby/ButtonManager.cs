@@ -6,12 +6,19 @@ public class ButtonManager : MonoBehaviour {
     public GameObject[] buttons;
     public GameObject selector;
     public GameObject target;
+    public GameObject anitarget;
+    public List<GameObject> unitIdle;
     public string[] unitName;
-
-    void Start () {
+    public bool[] unitOn;
+    void Start ()
+    {
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].AddComponent<getButtonIndex>();
         }
+    }
+    private void Update()
+    {
+      
     }
 }
