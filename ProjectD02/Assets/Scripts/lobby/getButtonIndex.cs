@@ -25,7 +25,7 @@ public class getButtonIndex : MonoBehaviour {
 
         UILabel uILabel = gameObject.GetComponentInChildren<UILabel>();             
         string str = uILabel.text;
-        LevelManager.instanCe.lv[0] = Convert.ToInt32(str);       //타겟의 자식개체의 라벨을 가져와 정수로 변환해 지정
+        //LevelManager.instanCe.lv[0] = Convert.ToInt32(str);       //타겟의 자식개체의 라벨을 가져와 정수로 변환해 지정
 
         udb.rfuILabel = bm.target.GetComponentInChildren<UILabel>();      //업다운버튼을 누를때 바꿀 라벨을 지정
     }

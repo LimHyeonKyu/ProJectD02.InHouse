@@ -9,6 +9,7 @@ public class MoneyManager : MonoBehaviour {
     public float goldCount;
     public float soulCount;
     public float reinFoceValue;
+    //public float reinFoecUpValue;
     public GameObject goldLabel;
     public GameObject soulLabel;
     private static MoneyManager _inStance = null;

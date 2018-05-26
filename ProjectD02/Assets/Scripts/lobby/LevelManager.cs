@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour {
             return _instanCe;
         }
     }
-    public float[] lv;
+    public int[] lv;
 
     void Start ()
     {
@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour {
         else if (_instanCe != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        LoadedLv();
+        //LoadedLv();
 	}
 	
 	void Update ()
@@ -34,26 +34,26 @@ public class LevelManager : MonoBehaviour {
 	}
     public void SaveLv()
     {
-        PlayerPrefs.SetFloat("UnitLevel1", lv[0]);
-        PlayerPrefs.SetFloat("UnitLevel2", lv[1]);
-        PlayerPrefs.SetFloat("UnitLevel3", lv[2]);
-        PlayerPrefs.SetFloat("UnitLevel4", lv[3]);
-        PlayerPrefs.SetFloat("UnitLevel5", lv[4]);
-        PlayerPrefs.SetFloat("UnitLevel6", lv[5]);
-        PlayerPrefs.SetFloat("UnitLevel7", lv[6]);
-        PlayerPrefs.SetFloat("UnitLevel8", lv[7]);
-        PlayerPrefs.SetFloat("UnitLevel9", lv[8]);
+        PlayerPrefs.SetInt("UnitLevel1", lv[0]);
+        PlayerPrefs.SetInt("UnitLevel2", lv[1]);
+        PlayerPrefs.SetInt("UnitLevel3", lv[2]);
+        PlayerPrefs.SetInt("UnitLevel4", lv[3]);
+        PlayerPrefs.SetInt("UnitLevel5", lv[4]);
+        PlayerPrefs.SetInt("UnitLevel6", lv[5]);
+        PlayerPrefs.SetInt("UnitLevel7", lv[6]);
+        PlayerPrefs.SetInt("UnitLevel8", lv[7]);
+        PlayerPrefs.SetInt("UnitLevel9", lv[8]);
     }
     public void LoadedLv()
     {
-        lv[0] = PlayerPrefs.GetFloat("UnitLevel1", lv[0]);
-        lv[1] = PlayerPrefs.GetFloat("UnitLevel2", lv[1]);
-        lv[2] = PlayerPrefs.GetFloat("UnitLevel3", lv[2]);
-        lv[3] = PlayerPrefs.GetFloat("UnitLevel4", lv[3]);
-        lv[4] = PlayerPrefs.GetFloat("UnitLevel5", lv[4]);
-        lv[5] = PlayerPrefs.GetFloat("UnitLevel6", lv[5]);
-        lv[6] = PlayerPrefs.GetFloat("UnitLevel7", lv[6]);
-        lv[7] = PlayerPrefs.GetFloat("UnitLevel8", lv[7]);
-        lv[8] = PlayerPrefs.GetFloat("UnitLevel9", lv[8]);
+        lv[0] = PlayerPrefs.GetInt("UnitLevel1", lv[0]);
+        lv[1] = PlayerPrefs.GetInt("UnitLevel2", lv[1]);
+        lv[2] = PlayerPrefs.GetInt("UnitLevel3", lv[2]);
+        lv[3] = PlayerPrefs.GetInt("UnitLevel4", lv[3]);
+        lv[4] = PlayerPrefs.GetInt("UnitLevel5", lv[4]);
+        lv[5] = PlayerPrefs.GetInt("UnitLevel6", lv[5]);
+        lv[6] = PlayerPrefs.GetInt("UnitLevel7", lv[6]);
+        lv[7] = PlayerPrefs.GetInt("UnitLevel8", lv[7]);
+        lv[8] = PlayerPrefs.GetInt("UnitLevel9", lv[8]);
     }
 }

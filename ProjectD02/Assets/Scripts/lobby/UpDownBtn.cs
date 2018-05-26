@@ -24,7 +24,7 @@ public class UpDownBtn : MonoBehaviour {
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if(LevelManager.instanCe.lv[0] <= 10)
         {
-            if(MoneyManager.inStance.reinFoceValue<=MoneyManager.inStance.goldCount && MoneyManager.inStance.goldCount>=0)
+            if (MoneyManager.inStance.reinFoceValue<=MoneyManager.inStance.goldCount && MoneyManager.inStance.goldCount>=0)
             //강화값이 MoneyManager 싱글톤의 골드값보다 작거나 같은경우와 MoneyManager 싱글톤 골드값이 0보다 크거나 같을경우 강화시킨다
             {
                 MoneyManager.inStance.goldCount -= MoneyManager.inStance.reinFoceValue;
@@ -42,7 +42,7 @@ public class UpDownBtn : MonoBehaviour {
     {
         if (rfuILabel != null)
         {
-            rfuILabel.text = Convert.ToString(LevelManager.instanCe.lv[0]);     //업,다운버튼을 누를때 바뀐 레벨을 스트링으로 라벨에 넣어줌
+            rfuILabel.text = Convert.ToString("LV "+ LevelManager.instanCe.lv[0]);     //업,다운버튼을 누를때 바뀐 레벨을 스트링으로 라벨에 넣어줌
         }
     }
 }
