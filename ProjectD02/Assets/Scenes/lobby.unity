@@ -6324,7 +6324,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6add68fe85f25b4795f5d12d6efc11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rfuILabel: {fileID: 0}
+  rfuILabel:
+  - {fileID: 436275528}
+  - {fileID: 1639337657}
+  - {fileID: 1878169554}
+  - {fileID: 383223899}
+  - {fileID: 863318359}
+  - {fileID: 275331523}
+  - {fileID: 749008248}
+  - {fileID: 1466022469}
+  - {fileID: 784375772}
+  btmMg: {fileID: 0}
 --- !u!114 &794319045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6678,7 +6688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCount: 1500
   soulCount: 100
-  reinFoceValue: NaN
+  reinFoceValue: 0
   goldLabel: {fileID: 0}
   soulLabel: {fileID: 0}
 --- !u!1 &832928313
