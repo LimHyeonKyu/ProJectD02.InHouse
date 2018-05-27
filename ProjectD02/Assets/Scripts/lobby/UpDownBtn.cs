@@ -9,6 +9,7 @@ public class UpDownBtn : MonoBehaviour {
 
     public UILabel[] rfuILabel;//강화수치 라벨
     public ButtonManager btmMg;
+    public GameObject gdCostLB;
     private void Start()
     {
         btmMg= GameObject.Find("BtnManager").GetComponent<ButtonManager>();
@@ -16,7 +17,7 @@ public class UpDownBtn : MonoBehaviour {
 
     void Update()
     {
-        
+
     }
     public void UpBtn()
     {
@@ -42,11 +43,19 @@ public class UpDownBtn : MonoBehaviour {
                             MoneyManager.inStance.reinFoceValue[i] *= 2;
                             LevelManager.instanCe.lv[i] += 1;
                         }
-                        MoneyManager.inStance.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[i]);
+                        gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[i]);
+                        if (LevelManager.instanCe.lv[i] == 10)
+                        {
+                            gdCostLB.GetComponent<UILabel>().text = "Max";
+                        }
                     }
                 }
             }
             rfuILabel[i].text = Convert.ToString("LV " + LevelManager.instanCe.lv[i]);
+            if (LevelManager.instanCe.lv[i] == 10)
+            {
+                rfuILabel[i].text = "LV " + "Max";
+            }
         }
     }
 }

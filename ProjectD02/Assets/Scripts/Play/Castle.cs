@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Castle : MonoBehaviour {
 
-    public float hp = 1;
+    public float maxHp;
+    public float hp;
     public GameObject roundManager;
     public GameObject hpBar;
     private UISlider hpBarUs;
@@ -21,7 +22,6 @@ public class Castle : MonoBehaviour {
             mr.enabled = false;
             BoxCollider bc = gameObject.GetComponent<BoxCollider>();
             bc.enabled = false;
-            Debug.Log("성 파괴! 스테이지 클리어!");
             UILabel ul = roundManager.GetComponent<UILabel>();
             ul.enabled = true;
             ul.text = "STAGE CLEAR!";
@@ -35,6 +35,6 @@ public class Castle : MonoBehaviour {
 
     private void Update()
     {
-        hpBarUs.value = hp;
+        hpBarUs.value = hp/maxHp;
     }
 }

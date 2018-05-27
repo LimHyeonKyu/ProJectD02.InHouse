@@ -12,7 +12,6 @@ public class MoneyManager : MonoBehaviour {
     //public float reinFoecUpValue;
     public GameObject goldLabel;
     public GameObject soulLabel;
-    public GameObject gdCostLB;
     private static MoneyManager _inStance = null;
     public static MoneyManager inStance
     {
@@ -43,7 +42,6 @@ public class MoneyManager : MonoBehaviour {
         {
             goldLabel = GameObject.Find("GoldLabel");
             soulLabel = GameObject.Find("SoulLabel");
-            gdCostLB = GameObject.Find("LabelCost");
             goldLabel.GetComponent<UILabel>().text = FoMatCount(goldCount);
             soulLabel.GetComponent<UILabel>().text = FoMatCount(soulCount);
         }

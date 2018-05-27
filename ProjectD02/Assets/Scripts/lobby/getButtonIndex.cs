@@ -45,8 +45,12 @@ public class getButtonIndex : MonoBehaviour {
                 //}
                 bm.anitarget.transform.parent = bm.target.transform;
                 bm.unitIdle[r].SetActive(true);
-                MoneyManager.inStance.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[r]);
-                nameLabel.GetComponent<UILabel>().text =bm.unitName[r];
+                udb.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[r]);
+                nameLabel.GetComponent<UILabel>().text = bm.unitName[r];
+                if (LevelManager.instanCe.lv[r] == 10)
+                {
+                    udb.gdCostLB.GetComponent<UILabel>().text = "Max";
+                }
             }
         }
         //UILabel uILabel = gameObject.GetComponentInChildren<UILabel>();             

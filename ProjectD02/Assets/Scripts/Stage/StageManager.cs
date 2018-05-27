@@ -7,18 +7,24 @@ using System.Linq;
 
 public class StageManager : MonoBehaviour {
 
+    public int currentStageNum;
     public int[] status;
     public UISprite[] stageSprites;
     public UILabel[] stageNum;
     public UILabel starSumLabel;
     public int starSum;
 
-	void Start () {
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Start () {
         for (int i = 0; i < status.Length; i++)
         {
             if (status[i] == 0)
             {
-                stageSprites[i].spriteName = ("stage_frame_nomal");
+                stageSprites[i].spriteName = ("stage_frame_nomal");     //스프라이트 이름으로 상태에 맞는 스프라이트를 찾아옴
                 stageNum[i].text = Convert.ToString(i+1);
                 stageSprites[i].gameObject.AddComponent<GoToStage>();
             }
