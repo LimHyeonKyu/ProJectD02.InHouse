@@ -8,10 +8,12 @@ public class JewelBtnManager : MonoBehaviour {
     public GameObject[] jewelBtn;
     public GameObject[] equipSlot;
     public GameObject[] equipBtn;
+    public List<GameObject> soulStoneItem;
     public GameObject clickBtn;
     public GameObject releaseBtn;
     void Awake()
     {
+        //soulStoneItem = new List<GameObject>();
         for (int i = 0; i < jewelBtn.Length; i++)
         {
             jewelBtn[i] = GameObject.Find("Stone" + i);
@@ -21,6 +23,10 @@ public class JewelBtnManager : MonoBehaviour {
         {
             equipSlot[a] = GameObject.Find("Slot" + a);
             equipSlot[a].AddComponent<EquipSlotBtn>();
+        }
+        for (int i = 0; i < soulStoneItem.Count; i++)
+        {
+            soulStoneItem[i] = GameObject.Find("SoulStone" + i);
         }
     }
 
@@ -76,6 +82,14 @@ public class JewelBtnManager : MonoBehaviour {
                     }
                 }
             }
+        }
+    }
+    public void ReArangeBtn()
+    {
+        for (int i = 0; i < soulStoneItem.Count; i++)
+        {
+            soulStoneItem[i].transform.position = jewelBtn[i].transform.position;
+            jewelBtn[i].GetComponent<JewelBtn>().soulItem = soulStoneItem[i];
         }
     }
 }
