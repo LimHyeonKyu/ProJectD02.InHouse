@@ -2679,6 +2679,7 @@ GameObject:
   - component: {fileID: 332178168}
   - component: {fileID: 332178170}
   - component: {fileID: 332178169}
+  - component: {fileID: 332178171}
   m_Layer: 8
   m_Name: Lime
   m_TagString: Untagged
@@ -2779,6 +2780,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &332178171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332178167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &337143495
 GameObject:
   m_ObjectHideFlags: 0
@@ -5590,6 +5602,7 @@ GameObject:
   - component: {fileID: 1758298549}
   - component: {fileID: 619373383}
   - component: {fileID: 619373382}
+  - component: {fileID: 619373384}
   m_Layer: 8
   m_Name: Prinny
   m_TagString: Untagged
@@ -5673,6 +5686,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &619373384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 619373381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &638488440
 GameObject:
   m_ObjectHideFlags: 0
@@ -7010,7 +7034,6 @@ MonoBehaviour:
   - Buste
   - Succubus
   - Guardian
-  unitOn: 000000000000000000
 --- !u!1 &797940070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7640,6 +7663,7 @@ GameObject:
   - component: {fileID: 849392573}
   - component: {fileID: 849392575}
   - component: {fileID: 849392574}
+  - component: {fileID: 849392576}
   m_Layer: 8
   m_Name: WoodGolem
   m_TagString: Untagged
@@ -7737,6 +7761,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &849392576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 849392572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &850490340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9978,6 +10013,7 @@ GameObject:
   - component: {fileID: 1162066261}
   - component: {fileID: 1162066263}
   - component: {fileID: 1162066262}
+  - component: {fileID: 1162066264}
   m_Layer: 8
   m_Name: Buster
   m_TagString: Untagged
@@ -10011,7 +10047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameIndex: 0
-  framerate: 10
+  framerate: 6
   ignoreTimeScale: 1
   loop: 1
   frames:
@@ -10076,6 +10112,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &1162066264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162066260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1162694455
 GameObject:
   m_ObjectHideFlags: 0
@@ -10739,6 +10786,7 @@ GameObject:
   - component: {fileID: 1216236818}
   - component: {fileID: 1216236820}
   - component: {fileID: 1216236819}
+  - component: {fileID: 1216236821}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Untagged
@@ -10838,6 +10886,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &1216236821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216236817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1216769990
 GameObject:
   m_ObjectHideFlags: 0
@@ -11103,6 +11162,7 @@ GameObject:
   - component: {fileID: 1249194499}
   - component: {fileID: 1249194501}
   - component: {fileID: 1249194500}
+  - component: {fileID: 1249194502}
   m_Layer: 8
   m_Name: Succubus
   m_TagString: Untagged
@@ -11203,6 +11263,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &1249194502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1249194498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1249799428
 GameObject:
   m_ObjectHideFlags: 0
@@ -13932,6 +14003,7 @@ GameObject:
   - component: {fileID: 1651193964}
   - component: {fileID: 1651193966}
   - component: {fileID: 1651193965}
+  - component: {fileID: 1651193967}
   m_Layer: 8
   m_Name: Guardian
   m_TagString: Untagged
@@ -14032,6 +14104,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &1651193967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651193963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1657552225
 GameObject:
   m_ObjectHideFlags: 0
@@ -17284,6 +17367,7 @@ GameObject:
   - component: {fileID: 2048508238}
   - component: {fileID: 2048508240}
   - component: {fileID: 2048508239}
+  - component: {fileID: 2048508241}
   m_Layer: 8
   m_Name: Felynn
   m_TagString: Untagged
@@ -17384,6 +17468,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &2048508241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048508237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2058400818
 GameObject:
   m_ObjectHideFlags: 0
@@ -17588,6 +17683,7 @@ GameObject:
   - component: {fileID: 2091391746}
   - component: {fileID: 2091391748}
   - component: {fileID: 2091391747}
+  - component: {fileID: 2091391749}
   m_Layer: 8
   m_Name: Kum
   m_TagString: Untagged
@@ -17687,6 +17783,17 @@ MonoBehaviour:
   mFixedAspect: 0
   mPixelSize: 1
   nextSprite: {fileID: 0}
+--- !u!114 &2091391749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091391745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe287e842366dd840b146d716dad6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2093989430
 GameObject:
   m_ObjectHideFlags: 0

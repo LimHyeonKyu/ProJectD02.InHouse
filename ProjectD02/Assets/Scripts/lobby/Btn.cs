@@ -19,4 +19,6 @@ public class Btn : MonoBehaviour {
         //Debug.Log(gameObject.name);
         selector.transform.position = gameObject.transform.position;
     }
+
+
 }

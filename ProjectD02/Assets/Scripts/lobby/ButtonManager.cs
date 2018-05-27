@@ -9,7 +9,6 @@ public class ButtonManager : MonoBehaviour {
     public GameObject anitarget;
     public List<GameObject> unitIdle;
     public string[] unitName;
-    public bool[] unitOn;
     void Start ()
     {
         for (int i = 0; i < buttons.Length; i++)
