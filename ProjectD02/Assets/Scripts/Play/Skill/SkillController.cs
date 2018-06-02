@@ -4,23 +4,116 @@ using UnityEngine;
 
 public class SkillController : MonoBehaviour {
 
+
+    public GameObject target;
+    public GameObject caster;
+    public float lv;
+    public GameObject UnitsManager;
+ 
+    public float atk;
     public float speed;
-    public float damage;
-    public GameObject effect1;
-	void Update ()
+
+    public List<GameObject> aoeTargets;
+
+    public enum SKILLS
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
-	}
-    void OnTriggerEnter(Collider col)
+        UNITSKILL=0,
+        ENEMYSKILL,
+        SKILL1,
+        SKILL2,
+        SKILL3
+    }
+    public SKILLS skills;
+
+     void Awake()
     {
-        if(col.gameObject.tag=="Castle")//만약 태그된게 Castle라면
+        //player = gameObject.transform.parent.gameObject;  
+    }
+
+    void Start()
+    {
+        //atk += player.GetComponent<UnitController>().b_Atk * lv * 0.1f;
+        aoeTargets.Clear();
+    }
+
+    void Update()
+    {
+        switch (skills)
         {
-            Instantiate(effect1, transform.position, transform.rotation);
-            Destroy(gameObject);//오브젝트를 파괴
-        }
-        if (col.gameObject.tag == "Enemy1")//만약 태그된게 Enemy1라면
-        {
-            
+            case SKILLS.UNITSKILL:
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+                break;
+            case SKILLS.SKILL2:
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+                break;
+            case SKILLS.ENEMYSKILL:
+                transform.Translate(-speed * Time.deltaTime, 0, 0);
+                break;
+           
         }
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(caster.tag == "Darking")
+        {
+            if(col.gameObject.tag == "Enemy")
+            {
+                if (aoeTargets.Count <= 2)
+                {
+                    aoeTargets.Add(col.gameObject);                    
+                }
+                if(aoeTargets.Count == 3)
+                {
+                    foreach (GameObject i in aoeTargets)
+                    {
+                        Debug.Log(i.name);
+                    }
+                }
+            }
+        }
+
+        if (caster.tag == "Player")
+        {
+            if (col.gameObject.tag == "Enemy")
+            {
+                target = col.gameObject;
+                target.GetComponent<UnitController>().GetDamage(atk);
+                Destroy(gameObject);
+            }
+
+            if (col.gameObject.tag == "Castle")
+            {
+                target = col.gameObject;
+                target.GetComponent<Castle>().hp -= atk;
+                Destroy(gameObject);
+            }
+        }
+
+        if (caster.tag == "Enemy")
+        {
+            if (col.gameObject.tag == "Player")
+            {
+                target = col.gameObject;
+                target.GetComponent<UnitController>().GetDamage(caster.GetComponent<UnitController>().atk);
+                Destroy(gameObject);
+             
+            }
+
+            if (col.gameObject.tag == "Darking")
+            {
+                target = col.gameObject;
+                target.GetComponent<PlayerController>().hp -= atk;
+                Destroy(gameObject);
+            }
+        }
+    }
+
+        //if (gameObject.tag =="Enemy")
+        //{
+        //player.GetComponent<UnitController>().enemy = col.gameObject;
+        //}
+
 }
+
+

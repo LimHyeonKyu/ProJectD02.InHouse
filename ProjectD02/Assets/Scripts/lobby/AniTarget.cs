@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class AniTarget : MonoBehaviour {
 
-	
+    public int unitCT;
+    public GameObject parentObj;
 	void Update ()
     {
-	    if(gameObject.transform.parent.GetComponent<getButtonIndex>().clickCt==0)
+	    if(LevelManager.instanCe.lv[unitCT]==0)
         {
             gameObject.SetActive(false);
         }
-	}
+        if(parentObj!=null)
+        {
+            if (gameObject.transform.parent.GetComponent<getButtonIndex>().clickCt == 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+    }
 }

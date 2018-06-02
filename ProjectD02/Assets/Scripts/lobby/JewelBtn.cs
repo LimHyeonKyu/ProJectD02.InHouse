@@ -10,7 +10,7 @@ public class JewelBtn : MonoBehaviour {
     public Vector3 selectPos;
     public bool stoneIn = false;
     public int clickCount;
-	void Start ()
+	void Awake()
     {
         jewelManager = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         select = GameObject.Find("Selector");
@@ -24,11 +24,12 @@ public class JewelBtn : MonoBehaviour {
         {
             clickCount = 0;
         }
-        if(stoneIn==false)
+        if (soulItem!=null&&soulItem.transform.parent != gameObject.transform)
         {
+            stoneIn = false;
             soulItem = null;
         }
-	}
+    }
 
     void OnClick()
     {

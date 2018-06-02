@@ -16,7 +16,6 @@ public class Btn : MonoBehaviour {
     {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
-        //Debug.Log(gameObject.name);
         selector.transform.position = gameObject.transform.position;
     }
 

@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JewelBtnManager : MonoBehaviour {
 
     public GameObject[] jewelBtn;
     public GameObject[] equipSlot;
     public GameObject[] equipBtn;
+    public BtnManager btnmg;
     public List<GameObject> soulStoneItem;
     public GameObject clickBtn;
     public GameObject releaseBtn;
+    public bool sibal = false;
+
     void Awake()
     {
-        //soulStoneItem = new List<GameObject>();
+        btnmg = GameObject.Find("BtnManager").GetComponent<BtnManager>();
+        btnmg.jewelMg = gameObject;
         for (int i = 0; i < jewelBtn.Length; i++)
         {
             jewelBtn[i] = GameObject.Find("Stone" + i);
@@ -24,15 +29,29 @@ public class JewelBtnManager : MonoBehaviour {
             equipSlot[a] = GameObject.Find("Slot" + a);
             equipSlot[a].AddComponent<EquipSlotBtn>();
         }
-        for (int i = 0; i < soulStoneItem.Count; i++)
-        {
-            soulStoneItem[i] = GameObject.Find("SoulStone" + i);
-        }
     }
 
+    void Start()
+    {
+        Scene sc = SceneManager.GetActiveScene();
+        if(sc.buildIndex==1)
+        {
+            sibal = false;
+        }
+    }
     void Update()
     {
-
+        if (sibal == false)
+        {
+            for (int i = 0; i < jewelBtn.Length; i++)
+            {
+                if (jewelBtn[i].GetComponent<JewelBtn>().stoneIn == true)
+                {
+                    soulStoneItem.Insert(i, jewelBtn[i].GetComponent<JewelBtn>().soulItem);
+                }
+            }
+            sibal = true;
+        }
     }
     public void Equip()//장착버튼
     {
@@ -40,21 +59,23 @@ public class JewelBtnManager : MonoBehaviour {
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (clickBtn != null)
         {
-            if(clickBtn.GetComponent<JewelBtn>().soulItem!=null)
+            for (int i = 0; i < equipSlot.Length; i++)
             {
-                for (int a = 0; a < equipSlot.Length; a++)
+                if(equipSlot[i].GetComponent<EquipSlotBtn>().soulIn==false)
                 {
-                    if (equipSlot[a].GetComponent<EquipSlotBtn>().soulIn == false)
+                    if(clickBtn.GetComponent<JewelBtn>().soulItem!=null)
                     {
-                        if (clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn == true)
+                        if (clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn[1] == false)
                         {
-                            clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn = false;
-                            clickBtn.GetComponent<JewelBtn>().stoneIn = false;
-                            equipSlot[a].GetComponent<EquipSlotBtn>().soulIn = true;
-                            equipSlot[a].GetComponent<EquipSlotBtn>().item = clickBtn.GetComponent<JewelBtn>().soulItem;
-                            equipSlot[a].GetComponent<EquipSlotBtn>().equipCount = 1;
-                            clickBtn.GetComponent<JewelBtn>().clickCount = 0;
-                            clickBtn.GetComponent<JewelBtn>().soulItem.transform.position = equipSlot[a].transform.position;
+                            clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn[0] = false;
+                            clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn[1] = true;
+                            equipSlot[i].GetComponent<EquipSlotBtn>().item = clickBtn.GetComponent<JewelBtn>().soulItem;
+                            clickBtn.GetComponent<JewelBtn>().soulItem.transform.parent = equipSlot[i].transform;
+                            clickBtn.GetComponent<JewelBtn>().soulItem.transform.position = equipSlot[i].transform.position;
+                            equipSlot[i].GetComponent<EquipSlotBtn>().soulIn = true;
+                            soulStoneItem.Remove(clickBtn.GetComponent<JewelBtn>().soulItem);
+                            SoulSkillManager.INSTANCE.soulskillNunber.Add(clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.skillCostValue.Add(clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
                         }
                     }
                 }
@@ -65,20 +86,26 @@ public class JewelBtnManager : MonoBehaviour {
     {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
-        if (releaseBtn.GetComponent<EquipSlotBtn>().equipCount == 1)
+        if (releaseBtn != null)
         {
             for (int a = 0; a < jewelBtn.Length; a++)
             {
                 if (jewelBtn[a].GetComponent<JewelBtn>().stoneIn == false)
                 {
-                    if(releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn == false)
+                    if(releaseBtn.GetComponent<EquipSlotBtn>().item!=null)
                     {
-                        releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn = true;
-                        releaseBtn.GetComponent<EquipSlotBtn>().equipCount = 0;
-                        jewelBtn[a].GetComponent<JewelBtn>().stoneIn = true;
-                        releaseBtn.GetComponent<EquipSlotBtn>().soulIn = false;
-                        jewelBtn[a].GetComponent<JewelBtn>().soulItem = releaseBtn.GetComponent<EquipSlotBtn>().item;
-                        releaseBtn.GetComponent<EquipSlotBtn>().item.transform.position = jewelBtn[a].transform.position;
+                        if (releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn[0] == false)
+                        {
+                            releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn[0] = true;
+                            releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn[1] = false;
+                            jewelBtn[a].GetComponent<JewelBtn>().soulItem = releaseBtn.GetComponent<EquipSlotBtn>().item;
+                            releaseBtn.GetComponent<EquipSlotBtn>().item.transform.parent = jewelBtn[a].transform;
+                            releaseBtn.GetComponent<EquipSlotBtn>().item.transform.position = jewelBtn[a].transform.position;
+                            jewelBtn[a].GetComponent<JewelBtn>().stoneIn = true;
+                            soulStoneItem.Add(releaseBtn.GetComponent<EquipSlotBtn>().item);
+                            SoulSkillManager.INSTANCE.soulskillNunber.Remove(releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.skillCostValue.Remove(releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().costValue);
+                        }
                     }
                 }
             }
@@ -86,10 +113,14 @@ public class JewelBtnManager : MonoBehaviour {
     }
     public void ReArangeBtn()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         for (int i = 0; i < soulStoneItem.Count; i++)
         {
             soulStoneItem[i].transform.position = jewelBtn[i].transform.position;
             jewelBtn[i].GetComponent<JewelBtn>().soulItem = soulStoneItem[i];
+            jewelBtn[i].GetComponent<JewelBtn>().soulItem.transform.parent = jewelBtn[i].transform;
+            jewelBtn[i].GetComponent<JewelBtn>().stoneIn = true;
         }
     }
 }

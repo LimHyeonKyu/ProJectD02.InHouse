@@ -10,7 +10,7 @@ public class EquipSlotBtn : MonoBehaviour {
     public int equipCount;
     public GameObject sel;
     public Vector3 selPos;
-    void Start()
+    void Awake()
     {
         jewelMg = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         sel = GameObject.Find("Selector");
@@ -20,17 +20,14 @@ public class EquipSlotBtn : MonoBehaviour {
 
     void Update()
     {
-        if(soulIn==false)
-        {
-            item = null;
-        }
         if (sel.transform.parent != gameObject.transform)
         {
             equipCount = 0;
         }
-        if (soulIn == false)
+        if (item != null && item.transform.parent != gameObject.transform)
         {
             item = null;
+            soulIn = false;
         }
     }
     void OnClick()
