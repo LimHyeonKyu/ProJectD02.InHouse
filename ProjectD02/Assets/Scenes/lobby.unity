@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -837,6 +837,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 8
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &39519799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,8 +900,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone9
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone8
   mFillCenter: 1
 --- !u!1 &49256471
 GameObject:
@@ -1433,6 +1445,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 3
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &147837785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1484,8 +1508,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone4
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone3
   mFillCenter: 1
 --- !u!1 &183665726
 GameObject:
@@ -2889,7 +2913,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3022
+  startingRenderQueue: 3013
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -3162,6 +3186,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 4
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &318932921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,8 +3249,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone5
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone4
   mFillCenter: 1
 --- !u!1 &329022496
 GameObject:
@@ -6115,6 +6151,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 1
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &545822368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6166,8 +6214,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone3
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone1
   mFillCenter: 1
 --- !u!1 &546322799
 GameObject:
@@ -8002,6 +8050,56 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!1 &752166333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 752166335}
+  - component: {fileID: 752166334}
+  m_Layer: 0
+  m_Name: SoulStoneDetailList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &752166334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752166333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001392cd509d209479879536c4879ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stoneDetailStr:
+  - "0\uBC88 \uC601\uD63C\uC11D: \uB2E8\uC77C \uD0C0\uACA9"
+  - "1\uBC88 \uC601\uD63C\uC11D: 3\uBA85\uC758 \uC801 \uD0C0\uACA9"
+  - "2\uBC88 \uC601\uD63C\uC11D: \uC804\uBC29\uC758 \uC801 \uBAA8\uB450 \uD0C0\uACA9"
+  - "3\uBC88 \uC601\uD63C\uC11D:"
+  - "4\uBC88 \uC601\uD63C\uC11D:"
+  - "5\uBC88 \uC601\uD63C\uC11D:"
+  - "6\uBC88 \uC601\uD63C\uC11D:"
+  - "7\uBC88 \uC601\uD63C\uC11D:"
+  - "8\uBC88 \uC601\uD63C\uC11D:"
+--- !u!4 &752166335
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752166333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753819044
 GameObject:
   m_ObjectHideFlags: 0
@@ -13409,6 +13507,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 0
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &1252069847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13460,8 +13570,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone7
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone0
   mFillCenter: 1
 --- !u!1 &1262810698
 GameObject:
@@ -13579,6 +13689,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 2
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &1265337664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13630,7 +13752,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
   mSpriteName: Stone2
   mFillCenter: 1
 --- !u!1 &1269691727
@@ -20391,6 +20513,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 7
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &2048379906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20442,8 +20576,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone8
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone7
   mFillCenter: 1
 --- !u!1 &2048508237
 GameObject:
@@ -20651,8 +20785,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone6
   mFillCenter: 1
 --- !u!114 &2058400821
 MonoBehaviour:
@@ -20681,6 +20815,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 6
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &2061649067
 GameObject:
   m_ObjectHideFlags: 0
@@ -21318,6 +21464,18 @@ MonoBehaviour:
   btnIn: 0000
   costValue: 10
   soulSkillNumber: 5
+  firstValue: 0
+  parentPos: {x: 0, y: 0, z: 0}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &2130202938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21369,8 +21527,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
-  mSpriteName: Stone6
+  mAtlas: {fileID: 114641226227971412, guid: e94b6eb4abf2bf04f864060d36b65b5a, type: 2}
+  mSpriteName: Stone5
   mFillCenter: 1
 --- !u!1 &2135014236
 GameObject:

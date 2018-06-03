@@ -187,6 +187,8 @@ public class UnitManager : MonoBehaviour {
 
     public void Unit1()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[0])//gaugeMG 오브젝트의 스크립트의 변수 비프카운터가 유닛코스트 배열0번 값보다 커지거나 같아진다면
         {
             units[0].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[0];
@@ -200,6 +202,8 @@ public class UnitManager : MonoBehaviour {
     }
     public void Unit2()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[1])
         {
             units[1].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[1];
@@ -227,6 +231,8 @@ public class UnitManager : MonoBehaviour {
 
     public void Unit4()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[3])
         {
             units[3].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[3];
@@ -241,6 +247,8 @@ public class UnitManager : MonoBehaviour {
 
     public void Unit5()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[4])
         {
             units[4].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[4];
@@ -255,6 +263,8 @@ public class UnitManager : MonoBehaviour {
 
     public void Unit6()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[5])
         {
             units[5].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[5];
@@ -269,6 +279,8 @@ public class UnitManager : MonoBehaviour {
 
     public void Unit7()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[6])
         {
             units[6].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[6];
@@ -282,6 +294,8 @@ public class UnitManager : MonoBehaviour {
     }
     public void Unit8()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[7])
         {
             units[7].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[7];
@@ -295,6 +309,8 @@ public class UnitManager : MonoBehaviour {
     }
     public void Unit9()
     {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[8])
         {
             units[8].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[8];

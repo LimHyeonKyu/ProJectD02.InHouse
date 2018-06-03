@@ -205,7 +205,11 @@ MonoBehaviour:
   - {fileID: 1578206188631878, guid: 405266bdd68d2b74d9567f49671a2824, type: 2}
   manaMG: {fileID: 0}
   player: {fileID: 0}
-  costLabel:
+  skillImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  skillcostLabel:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -213,10 +217,6 @@ MonoBehaviour:
   skillmo: 1
   statetime: 0
   skillstart: 0
-  cometTargets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114618028197047406
 MonoBehaviour:
   m_ObjectHideFlags: 1

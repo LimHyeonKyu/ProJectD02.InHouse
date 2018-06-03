@@ -121,10 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000a06e76d1987469513bb3533b749d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  player: {fileID: 0}
+  target: {fileID: 0}
+  caster: {fileID: 1873792864220314, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
   lv: 0
   UnitsManager: {fileID: 0}
+  cm: {fileID: 0}
+  comet: {fileID: 1621099916980768, guid: 3f464730bf7325e41a03036c640a1fdc, type: 2}
   atk: 0
-  speed: 2.5
-  skills: 4
+  speed: 5
+  skills: 0
