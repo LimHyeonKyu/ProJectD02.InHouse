@@ -58,10 +58,10 @@ public class SkillManager : MonoBehaviour {
 
     public void Skill1()
     {
-        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
-        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (manaMG.GetComponent<ManaManager>().manaCount >= SoulSkillManager.INSTANCE.skillCostValue[0])
         {
+            EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+            EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[0];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[0] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
@@ -72,10 +72,10 @@ public class SkillManager : MonoBehaviour {
 
     public void Skill2()
     {
-        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
-        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         if (manaMG.GetComponent<ManaManager>().manaCount >= SoulSkillManager.INSTANCE.skillCostValue[1])
-        {          
+        {
+            EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+            EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[1];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[1] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
             Instantiate(skill[1], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);       //skill배열의 1번을 생성한다
@@ -84,11 +84,11 @@ public class SkillManager : MonoBehaviour {
         }
     }
     public void Skill3()
-    {
-        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
-        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
+    {;
         if (manaMG.GetComponent<ManaManager>().manaCount >= SoulSkillManager.INSTANCE.skillCostValue[2])
         {
+            EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+            EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[2];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[2] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
             Instantiate(skill[2], transform.position, transform.rotation);//skill배열의 2번을 생성한다
