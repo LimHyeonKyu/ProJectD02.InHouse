@@ -13,7 +13,7 @@ public class RoundManager : MonoBehaviour {
     public GameObject bgmmg;
     public int[] middleBossStage;
     public int[] bossStage;
-    public int stagetCheck;
+    public int stageCheck;
     public bool castleBreak = false;
     public bool someon = false;
     public GameObject boss;
@@ -28,7 +28,7 @@ public class RoundManager : MonoBehaviour {
         pauseSp = GameObject.Find("PauseBtn").GetComponent<UISprite>();
         StartCoroutine(Round());
         bgmmg = GameObject.Find("BGMManager");
-        stagetCheck = sm.GetComponent<StageManager>().currentStageNum;
+        stageCheck = sm.GetComponent<StageManager>().currentStageNum;
         
 
     }
@@ -46,7 +46,7 @@ public class RoundManager : MonoBehaviour {
         {
             if (em != null)
             {
-                if (stagetCheck == middleBossStage[0])
+                if (stageCheck == middleBossStage[0])
                 {
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[0], em.transform.position, em.transform.rotation);
                     Destroy(em);
@@ -54,7 +54,7 @@ public class RoundManager : MonoBehaviour {
                     em = null;
                 }
 
-                if (stagetCheck == middleBossStage[1])
+                if (stageCheck == middleBossStage[1])
                 {
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[1], em.transform.position, em.transform.rotation);
                     Destroy(em);
@@ -62,7 +62,7 @@ public class RoundManager : MonoBehaviour {
                     em = null;
                 }
 
-                if (stagetCheck == bossStage[0])
+                if (stageCheck == bossStage[0])
                 {
                     Instantiate(em.GetComponent<EnemyManager>().boss[0], em.transform.position, em.transform.rotation);
                     Destroy(em);
@@ -106,6 +106,16 @@ public class RoundManager : MonoBehaviour {
         ul.text = "STAGE CLEAR!";
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(2.0f);
+        if (StageManager.instance.status[stageCheck - 1] >= 0 && StageManager.instance.status[stageCheck - 1] <3 && StageManager.instance.status[stageCheck] != 4)
+        {
+            StageManager.instance.status[stageCheck - 1] += 1;
+        }
+        if (StageManager.instance.status[stageCheck - 1] == 0 && StageManager.instance.status[stageCheck] == 4)
+        {
+            StageManager.instance.status[stageCheck - 1] += 1;
+            StageManager.instance.status[stageCheck] = 0;
+        }
+        //StageManager.instance.SaveSataus();
         SceneManager.LoadScene(2);
         bgmmg.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[1];
         MusicManager.instance.auDios.Play();

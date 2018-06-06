@@ -32,7 +32,7 @@ public class MoneyManager : MonoBehaviour {
         else if (_inStance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-       LoadedMoney();
+       //LoadedMoney();
     }
 	
 	void Update ()

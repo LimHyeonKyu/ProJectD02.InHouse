@@ -13,7 +13,6 @@ public class JewelBtnManager : MonoBehaviour {
     public List<GameObject> soulStoneItem;
     public GameObject clickBtn;
     public GameObject releaseBtn;
-    public bool sibal = false;
     public List<int> equipslotNum;
     public List<int> jewelslotNum;
     public List<int> stoneValue;
@@ -28,7 +27,7 @@ public class JewelBtnManager : MonoBehaviour {
             jewelslotNum.Add(-1);
         }
         
-        //LoadedValue();
+        LoadedValue();
         for (int i = 0; i < jewelBtn.Length; i++)
         {
             jewelBtn[i] = GameObject.Find("Stone" + i);
@@ -49,26 +48,11 @@ public class JewelBtnManager : MonoBehaviour {
 
     void Start()
     {
-        //Scene sc = SceneManager.GetActiveScene();
-        //if(sc.buildIndex==1)
-        //{
-        //    sibal = false;
-        //}
+
     }
     void Update()
     {
-        if (sibal == false)
-        {
-            for (int i = 0; i < 9; i++)
-            {
-                if (jewelBtn[i].GetComponent<JewelBtn>().stoneIn == true)
-                {
-                    soulStoneItem.Insert(i, jewelBtn[i].GetComponent<JewelBtn>().soulItem);
-                }
-            }
-            sibal = true;
-        }
-        //SaveValue();
+
     }
     public void Equip()//장착버튼
     {
@@ -94,8 +78,10 @@ public class JewelBtnManager : MonoBehaviour {
                             equipSlot[i].GetComponent<EquipSlotBtn>().soulIn = true;
                             soulStoneItem.Remove(clickBtn.GetComponent<JewelBtn>().soulItem);
                             SoulSkillManager.INSTANCE.soulskillNunber.Insert(i, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.soulskillNunber.RemoveAt(3);
                             SoulSkillManager.INSTANCE.skillCostValue.Insert(i, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
-                            //SaveValue();
+                            SoulSkillManager.INSTANCE.skillCostValue.RemoveAt(3);
+                            SaveValue();
                             SoulSkillManager.INSTANCE.SaveSoulStone();
                         }
                     }
@@ -126,9 +112,9 @@ public class JewelBtnManager : MonoBehaviour {
                             releaseBtn.GetComponent<EquipSlotBtn>().item.transform.position = jewelBtn[a].transform.position;
                             jewelBtn[a].GetComponent<JewelBtn>().stoneIn = true;
                             soulStoneItem.Add(releaseBtn.GetComponent<EquipSlotBtn>().item);
-                            SoulSkillManager.INSTANCE.soulskillNunber[releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().soulSkillNumber]=-1;
-                            SoulSkillManager.INSTANCE.skillCostValue[releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().costValue]=-1;
-                            //SaveValue();
+                            SoulSkillManager.INSTANCE.soulskillNunber[releaseBtn.GetComponent<EquipSlotBtn>().myNum]=-1;
+                            SoulSkillManager.INSTANCE.skillCostValue[releaseBtn.GetComponent<EquipSlotBtn>().myNum]=-1;
+                            SaveValue();
                             SoulSkillManager.INSTANCE.SaveSoulStone();
                         }
                     }
@@ -156,22 +142,22 @@ public class JewelBtnManager : MonoBehaviour {
             }
         }
         SoulSkillManager.INSTANCE.SaveSoulStone();
-        //SaveValue();
+        SaveValue();
     }
     public void SaveValue()
     {
         //Debug.Log("저장!");
         for (int i = 0; i < equipslotNum.Count; i++)
         {
-            PlayerPrefs.SetInt("EquipSlotNumb0" + i, equipslotNum[i]);
+            PlayerPrefs.SetInt("EquipSlotNumBer" + i, equipslotNum[i]);
         }
         for (int i = 0; i < jewelslotNum.Count; i++)
         {
-            PlayerPrefs.SetInt("JewelSlotNumb0" + i, jewelslotNum[i]);
+            PlayerPrefs.SetInt("JewelSlotNumBer" + i, jewelslotNum[i]);
         }
         for (int i = 0; i < stoneValue.Count; i++)
         {
-            PlayerPrefs.SetInt("StoneFirstNumb0" + i, stoneValue[i]);
+            PlayerPrefs.SetInt("StoneFirstNumBer" + i, stoneValue[i]);
         }
     }
     public void LoadedValue()
@@ -179,15 +165,15 @@ public class JewelBtnManager : MonoBehaviour {
         //Debug.Log("불러옴!");
         for (int i = 0; i < equipslotNum.Count; i++)
         {
-            equipslotNum[i]= PlayerPrefs.GetInt("EquipSlotNumb0" + i, equipslotNum[i]);
+            equipslotNum[i]= PlayerPrefs.GetInt("EquipSlotNumBer" + i, equipslotNum[i]);
         }
         for (int i = 0; i < jewelslotNum.Count; i++)
         {
-            jewelslotNum[i] = PlayerPrefs.GetInt("JewelSlotNumb0" + i, jewelslotNum[i]);
+            jewelslotNum[i] = PlayerPrefs.GetInt("JewelSlotNumBer" + i, jewelslotNum[i]);
         }
         for (int i = 0; i < stoneValue.Count; i++)
         {
-            stoneValue[i] = PlayerPrefs.GetInt("StoneFirstNumb0" + i, stoneValue[i]);
+            stoneValue[i] = PlayerPrefs.GetInt("StoneFirstNumBer" + i, stoneValue[i]);
         }
     }
 }

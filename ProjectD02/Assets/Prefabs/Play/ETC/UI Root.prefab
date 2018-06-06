@@ -9079,7 +9079,7 @@ MonoBehaviour:
   bgmmg: {fileID: 0}
   middleBossStage: 060000000c000000
   bossStage: 12000000
-  stagetCheck: 0
+  stageCheck: 0
   castleBreak: 0
   someon: 0
   boss: {fileID: 0}

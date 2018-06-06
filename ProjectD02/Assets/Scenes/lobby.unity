@@ -3177,7 +3177,7 @@ MonoBehaviour:
   - {fileID: 0}
   jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 1
+  costValue: 50
   firstValue: 0
   soulSkillNumber: 4
 --- !u!114 &318932921
@@ -7612,7 +7612,6 @@ MonoBehaviour:
   soulStoneItem: []
   clickBtn: {fileID: 0}
   releaseBtn: {fileID: 0}
-  sibal: 0
   equipslotNum: 
   jewelslotNum: 
   stoneValue: 000000000000000000000000000000000000000000000000000000000000000000000000

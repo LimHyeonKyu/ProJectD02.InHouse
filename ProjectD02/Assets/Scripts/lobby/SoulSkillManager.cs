@@ -32,6 +32,7 @@ public class SoulSkillManager : MonoBehaviour {
             soulskillNunber.Add(-1);
             skillCostValue.Add(-1);
         }
+        LoadedSoulStone();
     }
 	
 	void Update ()
@@ -39,25 +40,33 @@ public class SoulSkillManager : MonoBehaviour {
         Scene sc = SceneManager.GetActiveScene();
         if(sc.buildIndex==1)
         {
-            if(soulskillNunber.Count>=3&&skillCostValue.Count>=3)
-            {
-                soulskillNunber.IndexOf(3);
-                skillCostValue.IndexOf(3);
-            }
+
         }
     }
 
     public void SaveSoulStone()
     {
-        PlayerPrefs.SetInt("SoulStone01", soulskillNunber[0]);
-        PlayerPrefs.SetInt("SoulStone02", soulskillNunber[1]);
-        PlayerPrefs.SetInt("SoulStone03", soulskillNunber[2]);
+        //Debug.Log("저장");
+        for (int i = 0; i < soulskillNunber.Count; i++)
+        {
+            PlayerPrefs.SetInt("SoulSkillNumber"+i, soulskillNunber[i]);
+        }
+        for (int i = 0; i < skillCostValue.Count; i++)
+        {
+            PlayerPrefs.SetInt("SoulCostValue" + i, skillCostValue[i]);
+        }
     }
 
     public void LoadedSoulStone()
     {
-        soulskillNunber[0] = PlayerPrefs.GetInt("SoulStone01", soulskillNunber[0]);
-        soulskillNunber[1] = PlayerPrefs.GetInt("SoulStone02", soulskillNunber[1]);
-        soulskillNunber[2] = PlayerPrefs.GetInt("SoulStone03", soulskillNunber[2]);
+        //Debug.Log("불러옴");
+        for (int i = 0; i < soulskillNunber.Count; i++)
+        {
+            soulskillNunber[i] = PlayerPrefs.GetInt("SoulSkillNumber" + i, soulskillNunber[i]);
+        }
+        for (int i = 0; i < skillCostValue.Count; i++)
+        {
+            skillCostValue[i]= PlayerPrefs.GetInt("SoulCostValue" + i, skillCostValue[i]);
+        }
     }
 }
