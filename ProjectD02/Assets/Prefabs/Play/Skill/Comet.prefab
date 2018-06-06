@@ -35,10 +35,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4546593623330644}
-  - component: {fileID: 114349354972240938}
+  - component: {fileID: 114870343243862680}
+  - component: {fileID: 54129180384229780}
+  - component: {fileID: 65004119370441528}
   m_Layer: 0
   m_Name: Comet
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1621099916980768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.89, y: 0.71, z: 0}
+  m_LocalPosition: {x: 14.243404, y: -27.845676, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4810638440951274}
@@ -70,7 +72,34 @@ Transform:
   m_Father: {fileID: 4546593623330644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114349354972240938
+--- !u!54 &54129180384229780
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621099916980768}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65004119370441528
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621099916980768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114870343243862680
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,16 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621099916980768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d41d42d30b03ad48a0f98ada340bf51, type: 3}
+  m_Script: {fileID: 11500000, guid: ed72c4b727e698a428e54e8cd3e6b132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  player: {fileID: 0}
-  hillUnits: []
-  skillAtk: 20
-  comet: {fileID: 1621099916980768}
-  speed: 5
-  skills: 1
+  cm: {fileID: 0}
+  target: {fileID: 0}
 --- !u!212 &212406320935560486
 SpriteRenderer:
   m_ObjectHideFlags: 1

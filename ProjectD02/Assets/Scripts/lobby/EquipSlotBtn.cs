@@ -8,21 +8,18 @@ public class EquipSlotBtn : MonoBehaviour {
     public GameObject item;
     public bool soulIn = false;
     public int equipCount;
+    public int myNum;
     public GameObject sel;
     public Vector3 selPos;
-    public Vector3 myPos;
-
     public UILabel sdL;         //stone detail label
     public string sdStr;        //stone detail string
     public List<GameObject> ssi;        //jewelBtnManager - soul stone item 
     public List<string> stoneDetails;
-
     void Awake()
     {
         jewelMg = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         sel = GameObject.Find("Selector");
         selPos = sel.transform.localPosition;
-        myPos = gameObject.transform.localPosition;
         stoneDetails = GameObject.Find("SoulStoneDetailList").GetComponent<SoulStoneDetailList>().stoneDetailStr;
     }
 
@@ -34,8 +31,12 @@ public class EquipSlotBtn : MonoBehaviour {
         }
         if (item != null && item.transform.parent != gameObject.transform)
         {
-            item = null;
+            //item = null;
             soulIn = false;
+        }
+        if(soulIn==false)
+        {
+            item = null;
         }
         ssi = jewelMg.soulStoneItem;
     }
@@ -51,7 +52,8 @@ public class EquipSlotBtn : MonoBehaviour {
         equipCount += 1;
         foreach (GameObject ss in ssi)
         {
-            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss))
+            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss) )
+                //gameObject.transform.GetChild(1).name == "SoulStone" + ssi.IndexOf(ss))
             {
                 sdStr = stoneDetails[ssi.IndexOf(ss)];
             }
@@ -60,9 +62,17 @@ public class EquipSlotBtn : MonoBehaviour {
         if (equipCount > 1)
         {
             equipCount = 0;
-            sel.transform.position = selPos;
-            sdStr = "선택된 영혼석이 없어요!";
+            sel.transform.parent = jewelMg.transform;
+            sel.transform.localPosition = selPos;
+            if (gameObject.transform.childCount < 2)
+            {
+                sdStr = "선택된 영혼석이 없어요!";
+            }
         }
+        //if (equipCount==0)
+        //{
+        //    sdStr = "선택된 영혼석이 없어요!";
+        //}
         jewelMg.releaseBtn = gameObject;
         sdL.text = sdStr;
     }

@@ -6415,13 +6415,13 @@ MonoBehaviour:
   mWidth: 130
   mHeight: 45
   mDepth: 7
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.8888888
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 
   mFontSize: 50
@@ -7482,13 +7482,13 @@ MonoBehaviour:
   mWidth: 136
   mHeight: 50
   mDepth: 15
-  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
+  mMat: {fileID: 2100000, guid: d22c0ec8eb1acee45a6912f4e5a54a08, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.72
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: d22c0ec8eb1acee45a6912f4e5a54a08, type: 3}
   mFont: {fileID: 0}
   mText: StopWatch
   mFontSize: 30
@@ -8581,13 +8581,13 @@ MonoBehaviour:
   mWidth: 130
   mHeight: 45
   mDepth: 7
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.8888888
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 
   mFontSize: 50

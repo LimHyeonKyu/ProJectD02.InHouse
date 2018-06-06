@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4023453}
   - component: {fileID: 4023454}
   m_Layer: 8
-  m_Name: Slot2
+  m_Name: EquipSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -834,21 +834,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
   costValue: 10
-  soulSkillNumber: 8
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 8
 --- !u!114 &39519799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,7 +1297,7 @@ GameObject:
   - component: {fileID: 99915257}
   - component: {fileID: 99915258}
   m_Layer: 8
-  m_Name: Slot1
+  m_Name: EquipSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1442,21 +1436,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 3
+  costValue: 40
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 3
 --- !u!114 &147837785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3183,21 +3171,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 4
+  costValue: 1
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 4
 --- !u!114 &318932921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4520,7 +4502,7 @@ Transform:
   - {fileID: 618294669}
   - {fileID: 24534556}
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &421393862
 MonoBehaviour:
@@ -6148,21 +6130,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 1
+  costValue: 20
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 1
 --- !u!114 &545822368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6538,6 +6514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lv: 010000000000000000000000000000000000000000000000000000000000000000000000
+  soulLv: 
 --- !u!4 &578440835
 Transform:
   m_ObjectHideFlags: 0
@@ -6905,7 +6882,7 @@ Transform:
   - {fileID: 2018063104}
   - {fileID: 329022498}
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &604890640
 MonoBehaviour:
@@ -7636,6 +7613,9 @@ MonoBehaviour:
   clickBtn: {fileID: 0}
   releaseBtn: {fileID: 0}
   sibal: 0
+  equipslotNum: 
+  jewelslotNum: 
+  stoneValue: 000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &703268992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8078,15 +8058,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stoneDetailStr:
-  - "0\uBC88 \uC601\uD63C\uC11D: \uB2E8\uC77C \uD0C0\uACA9"
-  - "1\uBC88 \uC601\uD63C\uC11D: 3\uBA85\uC758 \uC801 \uD0C0\uACA9"
-  - "2\uBC88 \uC601\uD63C\uC11D: \uC804\uBC29\uC758 \uC801 \uBAA8\uB450 \uD0C0\uACA9"
-  - "3\uBC88 \uC601\uD63C\uC11D:"
-  - "4\uBC88 \uC601\uD63C\uC11D:"
-  - "5\uBC88 \uC601\uD63C\uC11D:"
-  - "6\uBC88 \uC601\uD63C\uC11D:"
-  - "7\uBC88 \uC601\uD63C\uC11D:"
-  - "8\uBC88 \uC601\uD63C\uC11D:"
+  - "WIND  \uC804\uBC29\uC758 \uC801 1\uBA85\uC744 \uBC00\uCCD0\uB0B4\uBA70 \uB370\uBBF8\uC9C0\uB294
+    \uC8FC\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+  - "COMET  \uC804\uBC29 \uC77C\uC815\uBC94\uC704\uC758 3\uBA85\uC758 \uC801\uC5D0\uAC8C
+    \uB370\uBBF8\uC9C0\uB97C \uC90D\uB2C8\uB2E4."
+  - "FIRE  \uC804\uBC29\uC758 \uC77C\uC815\uBC94\uC704\uB0B4 \uBAA8\uB4E0\uC801\uC5D0\uAC8C
+    \uB370\uBBF8\uC9C0\uB97C \uC90D\uB2C8\uB2E4."
+  - "POISON  \uC804\uBC29\uC758 1\uBA85\uC758 \uC801\uC5D0\uAC8C \uB3C5\uB370\uBBF8\uC9C0\uB97C
+    \uC90D\uB2C8\uB2E4."
+  - "THUNDER STORM  \uBC94\uC704 \uB0B4\uC758 \uBAA8\uB4E0\uC801\uC5D0\uAC8C \uC77C\uC815\uC2DC\uAC04\uB3D9\uC548
+    \uC2A4\uD134\uC744 \uAC78\uBA70 \uB370\uBBF8\uC9C0\uB97C \uC90D\uB2C8\uB2E4."
+  - "CURSED HEAL  \uD50C\uB808\uC774\uC5B4 \uC8FC\uBCC0\uC758 \uBBF8\uB2C8\uC5B8\uB4E4\uC5D0\uAC8C
+    \uC77C\uC815HP\uB97C \uD68C\uBCF5 \uC2DC\uCF1C\uC90D\uB2C8\uB2E4."
+  - "CONVERT  \uC77C\uC815 \uB9C8\uB098\uB97C \uC5D8\uB9AD\uC11C\uB85C \uBCC0\uD658
+    \uD569\uB2C8\uB2E4."
+  - "ICE  \uC804\uBC29\uC758 \uBC94\uC704\uB0B4\uC5D0 \uC788\uB294\uC801\uC744 \uC77C\uC815\uC2DC\uAC04\uB3D9\uC548
+    \uC5BC\uB9AC\uBA70 \uB370\uBBF8\uC9C0\uB294 \uC8FC\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+  - "BULLET  \uC804\uBC29\uC758 1\uBA85\uC758 \uC801\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C
+    \uC90D\uB2C8\uB2E4."
 --- !u!4 &752166335
 Transform:
   m_ObjectHideFlags: 0
@@ -8094,7 +8083,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 752166333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.366, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8711,6 +8700,7 @@ MonoBehaviour:
   bgmMg: {fileID: 0}
   jewelMg: {fileID: 0}
   udbtn: {fileID: 0}
+  readychang: {fileID: 1061321344}
 --- !u!114 &794319044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10000,7 +9990,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 875363203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -709, z: 0}
+  m_LocalPosition: {x: 0, y: -828, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 288269454}
@@ -10183,7 +10173,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &930475320
 MonoBehaviour:
@@ -10653,7 +10643,7 @@ Transform:
   - {fileID: 1184810595}
   - {fileID: 1751012316}
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &974965440
 MonoBehaviour:
@@ -10715,7 +10705,7 @@ GameObject:
   - component: {fileID: 983592359}
   - component: {fileID: 983592360}
   m_Layer: 8
-  m_Name: Slot0
+  m_Name: EquipSlot0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11387,6 +11377,103 @@ MonoBehaviour:
   mAtlas: {fileID: 114839670260646956, guid: 900e87cc1fd130542bcbcbf328afff4d, type: 2}
   mSpriteName: Buster
   mFillCenter: 1
+--- !u!1 &1061321344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1061321345}
+  - component: {fileID: 1061321346}
+  - component: {fileID: 1061321348}
+  m_Layer: 8
+  m_Name: ReadyChang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1061321345
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061321344}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 83, y: 10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1899406978}
+  m_Father: {fileID: 2011083269}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061321346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061321344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 0, b: 0, a: 1}
+  mPivot: 4
+  mWidth: 180
+  mHeight: 60
+  mDepth: 7
+  mMat: {fileID: 0}
+  autoResizeBoxCollider: 1
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 3
+  mType: 1
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Button
+  mFillCenter: 1
+--- !u!65 &1061321348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061321344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 180, y: 60, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1089194444
 GameObject:
   m_ObjectHideFlags: 0
@@ -11974,7 +12061,7 @@ Transform:
   - {fileID: 1269691728}
   - {fileID: 337143497}
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1152996437
 MonoBehaviour:
@@ -12391,6 +12478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1824886647}
+  - {fileID: 1767761442}
   m_Father: {fileID: 974965439}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12424,8 +12512,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 100
-  mHeight: 100
+  mWidth: 50
+  mHeight: 50
   mDepth: 1
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
@@ -12446,7 +12534,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: spiritIcon_1
+  mSpriteName: Soul
   mFillCenter: 1
 --- !u!1 &1195690484
 GameObject:
@@ -13504,21 +13592,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
   costValue: 10
-  soulSkillNumber: 0
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 0
 --- !u!114 &1252069847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13686,21 +13768,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 2
+  costValue: 30
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 2
 --- !u!114 &1265337664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15482,7 +15558,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 794319043}
+    mMethodName: ShopBtn
+    mParameters: []
+    oneShot: 0
 --- !u!65 &1490109083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16341,7 +16421,7 @@ Transform:
   - {fileID: 1490109081}
   - {fileID: 511979197}
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1600445855
 MonoBehaviour:
@@ -17445,7 +17525,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1724615994
 MonoBehaviour:
@@ -18075,6 +18155,89 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!1 &1767761441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1767761442}
+  - component: {fileID: 1767761443}
+  m_Layer: 8
+  m_Name: BackSoul
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767761442
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767761441}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0008001, y: 1.0008001, z: 1.0008001}
+  m_Children: []
+  m_Father: {fileID: 1184810595}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767761443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767761441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 0, g: 0, b: 0, a: 1}
+  mPivot: 4
+  mWidth: 53
+  mHeight: 53
+  mDepth: 0
+  mMat: {fileID: 0}
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Soul
+  mFillCenter: 1
 --- !u!1 &1774344420
 GameObject:
   m_ObjectHideFlags: 0
@@ -19020,6 +19183,103 @@ MonoBehaviour:
   mAtlas: {fileID: 114839670260646956, guid: 900e87cc1fd130542bcbcbf328afff4d, type: 2}
   mSpriteName: Succubus
   mFillCenter: 1
+--- !u!1 &1899406977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1899406978}
+  - component: {fileID: 1899406979}
+  m_Layer: 8
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1899406978
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899406977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1061321345}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1899406979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899406977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 150
+  mHeight: 50
+  mDepth: 7
+  mMat: {fileID: 2100000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 3
+  keepCrispWhenShrunk: 1
+  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mFont: {fileID: 0}
+  mText: "\uC900\uBE44\uC911\uC785\uB2C8\uB2E4"
+  mFontSize: 50
+  mFontStyle: 1
+  mAlignment: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 2, y: 2}
+  mOverflow: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  mSpacingX: 0
+  mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
+  mShrinkToFit: 0
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &1904718146
 GameObject:
   m_ObjectHideFlags: 0
@@ -19499,7 +19759,7 @@ Transform:
   - {fileID: 1103155134}
   - {fileID: 288269454}
   m_Father: {fileID: 2011083269}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1957836724
 MonoBehaviour:
@@ -20003,6 +20263,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0027777778, y: 0.0027777778, z: 0.0027777778}
   m_Children:
+  - {fileID: 1061321345}
   - {fileID: 930475319}
   - {fileID: 1724615993}
   - {fileID: 1600445854}
@@ -20264,6 +20525,89 @@ MonoBehaviour:
   - {fileID: 2006815995}
   - {fileID: 2135014236}
   target: {fileID: 0}
+--- !u!1 &2042353865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2042353866}
+  - component: {fileID: 2042353867}
+  m_Layer: 8
+  m_Name: BackGold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042353866
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042353865}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0008001, y: 1.0008001, z: 1.0008001}
+  m_Children: []
+  m_Father: {fileID: 2061649068}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2042353867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042353865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 0.2352941, g: 0.2352941, b: 0.2352941, a: 1}
+  mPivot: 4
+  mWidth: 65
+  mHeight: 65
+  mDepth: -1
+  mMat: {fileID: 0}
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 1
+  mType: 1
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Gold Coin lr
+  mFillCenter: 1
 --- !u!1 &2044934324
 GameObject:
   m_ObjectHideFlags: 0
@@ -20510,21 +20854,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 7
+  costValue: 15
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 7
 --- !u!114 &2048379906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20812,21 +21150,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 6
+  costValue: 20
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 6
 --- !u!1 &2061649067
 GameObject:
   m_ObjectHideFlags: 0
@@ -20854,6 +21186,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1621636262}
+  - {fileID: 2042353866}
   m_Father: {fileID: 974965439}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20887,8 +21220,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 100
-  mHeight: 100
+  mWidth: 60
+  mHeight: 60
   mDepth: 0
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
@@ -21461,21 +21794,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  equipChang:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jewemanager: {fileID: 0}
   btnIn: 0000
-  costValue: 10
-  soulSkillNumber: 5
+  costValue: 20
   firstValue: 0
-  parentPos: {x: 0, y: 0, z: 0}
-  pos:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  soulSkillNumber: 5
 --- !u!114 &2130202938
 MonoBehaviour:
   m_ObjectHideFlags: 0

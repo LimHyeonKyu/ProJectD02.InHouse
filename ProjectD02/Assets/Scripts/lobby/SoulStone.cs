@@ -9,87 +9,89 @@ public class SoulStone : MonoBehaviour {
 
     public GameObject jewelPN;
     public GameObject[] jewelChang;
+    public GameObject[] equipChang;
+    public JewelBtnManager jewemanager;
     public bool[] btnIn;
     public int costValue;
-    public int soulSkillNumber;
     public int firstValue;
-    public Vector3 parentPos;
-    public Vector3[] pos;
+    public int soulSkillNumber;
     void Awake()
     {
+        jewemanager = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         jewelPN = GameObject.Find("JewelPanel");
         gameObject.transform.parent = jewelPN.transform;
     }
-	void Start ()
+    void Start()
     {
-        //LoadedStonePositon();
-        if(firstValue==0)
+        firstValue = jewemanager.stoneValue[soulSkillNumber];
+        if (firstValue==0)
         {
-            for (int i = 0; i < jewelChang.Length; i++)
+            //Debug.Log("0");
+            for (int a = 0; a < jewelChang.Length; a++)
             {
-                jewelChang[i] = GameObject.Find("Stone" + i);
-                if (jewelChang[i].GetComponent<JewelBtn>().stoneIn == false)
+                jewelChang[a] = GameObject.Find("Stone" + a);
+                if (jewelChang[a].GetComponent<JewelBtn>().stoneIn == false)
                 {
                     if (btnIn[0] == false)
                     {
                         btnIn[0] = true;
                         btnIn[1] = false;
-                        jewelChang[i].GetComponent<JewelBtn>().stoneIn = true;
-                        jewelChang[i].GetComponent<JewelBtn>().soulItem = gameObject;
-                        gameObject.transform.position = jewelChang[i].transform.position;
-                        gameObject.transform.parent = jewelChang[i].transform;
+                        jewemanager.stoneValue[soulSkillNumber] = 1;
+                        jewelChang[a].GetComponent<JewelBtn>().stoneIn = true;
+                        jewelChang[a].GetComponent<JewelBtn>().soulItem = gameObject;
+                        gameObject.transform.position = jewelChang[a].transform.position;
+                        gameObject.transform.parent = jewelChang[a].transform;
+                        jewemanager.jewelslotNum[a] = soulSkillNumber;
+                        jewemanager.SaveValue();
                     }
                 }
             }
         }
-        else if (firstValue == 1)
+        else if(firstValue==1)
         {
-            //for (int i = 0; i < jewelChang.Length; i++)
-            //{
-            //    jewelChang[i] = GameObject.Find("Stone" + i);
-            //    if (jewelChang[i].GetComponent<JewelBtn>().stoneIn == false)
-            //    {
-            //        if (btnIn[0] == false)
-            //        {
-            //            btnIn[0] = true;
-            //            btnIn[1] = false;
-            //            jewelChang[i].GetComponent<JewelBtn>().stoneIn = true;
-            //            jewelChang[i].GetComponent<JewelBtn>().soulItem = gameObject;
-            //            gameObject.transform.localPosition = pos[soulSkillNumber];
-            //            gameObject.transform.parent = jewelChang[i].transform;
-            //        }
-            //    }
-            //}
-            for (int i = 0; i < pos.Length; i++)
+            //Debug.Log("1");
+            for (int a = 0; a < jewelChang.Length; a++)
             {
-                jewelChang[i] = GameObject.Find("Stone" + i);
-                gameObject.transform.parent = jewelChang[i].transform;
-                gameObject.transform.localPosition = pos[soulSkillNumber];
+                jewelChang[a] = GameObject.Find("Stone" + a);
+                if (jewelChang[a].GetComponent<JewelBtn>().stoneIn == false&&jewemanager.jewelslotNum[a]==soulSkillNumber)
+                {
+                    if (btnIn[0] == false)
+                    {
+                        btnIn[0] = true;
+                        btnIn[1] = false;
+                        jewelChang[a].GetComponent<JewelBtn>().stoneIn = true;
+                        jewelChang[a].GetComponent<JewelBtn>().soulItem = gameObject;
+                        gameObject.transform.position = jewelChang[a].transform.position;
+                        gameObject.transform.parent = jewelChang[a].transform;
+                        jewemanager.jewelslotNum[a] = soulSkillNumber;
+                        jewemanager.SaveValue();
+                    }
+                }
+            }
+            for (int i = 0; i < equipChang.Length; i++)
+            {
+                equipChang[i] = GameObject.Find("EquipSlot" + i);
+                if (equipChang[i].GetComponent<EquipSlotBtn>().soulIn == false && jewemanager.equipslotNum[i] == soulSkillNumber)
+                {
+                    if (btnIn[1] == false)
+                    {
+                        btnIn[0] = false;
+                        btnIn[1] = true;
+                        equipChang[i].GetComponent<EquipSlotBtn>().soulIn = true;
+                        equipChang[i].GetComponent<EquipSlotBtn>().item = gameObject;
+                        gameObject.transform.position = equipChang[i].transform.position;
+                        gameObject.transform.parent = equipChang[i].transform;
+                        jewemanager.equipslotNum[i] = soulSkillNumber;
+                        jewemanager.SaveValue();
+                    }
+                }
             }
         }
     }
-	
-	void Update ()
+
+    void Update()
     {
-		
-	}
-    public void SaveStonePosition()
-    {
-        PlayerPrefs.SetFloat("StonePosX" + soulSkillNumber.ToString(), parentPos.x);
-        PlayerPrefs.SetFloat("StonePosY" + soulSkillNumber.ToString(), parentPos.y);
-        PlayerPrefs.SetFloat("StonePosZ" + soulSkillNumber.ToString(), parentPos.z);
-        Debug.Log(parentPos);
-        PlayerPrefs.SetInt("FirstValue6", firstValue);
+        
     }
-    public void LoadedStonePositon()
-    {
-        for (int i = 0; i < pos.Length; i++)
-        {
-            pos[soulSkillNumber].x = PlayerPrefs.GetFloat("StonePosX" + soulSkillNumber.ToString(), parentPos.x);
-            pos[soulSkillNumber].y = PlayerPrefs.GetFloat("StonePosY" + soulSkillNumber.ToString(), parentPos.y);
-            pos[soulSkillNumber].z = PlayerPrefs.GetFloat("StonePosZ" + soulSkillNumber.ToString(), parentPos.z);
-        }
-        //firstValue = PlayerPrefs.GetInt("FirstValue6", firstValue);
-        Debug.Log("불러온다");
-    }
+
 }
