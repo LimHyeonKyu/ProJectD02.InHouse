@@ -15,8 +15,9 @@ public class BtnManager : MonoBehaviour {
     public UpDownBtn udbtn;
     public GameObject readychang;
     private float cooltime;
-    private float respawn = 2;
+    private float closeTime = 1.5f;
     private bool boolen = false;
+
     private void Start()
     {
         MinionBtn();
@@ -50,7 +51,7 @@ public class BtnManager : MonoBehaviour {
         if(boolen==true)
         {
             cooltime += Time.deltaTime;
-            if(cooltime>respawn)
+            if(cooltime>closeTime)
             {
                 cooltime = 0;
                 boolen = false;

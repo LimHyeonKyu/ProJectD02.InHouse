@@ -653,7 +653,8 @@ MonoBehaviour:
   dmgcheck:
   - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
   - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
-  effect: []
+  effect:
+  - {fileID: 176804, guid: 4889039938a567444827eafcfbc2b267, type: 2}
   Bullets: {fileID: 0}
   lvManager: {fileID: 0}
   hpBar:
@@ -672,6 +673,7 @@ MonoBehaviour:
   moneyManager: {fileID: 0}
   sternEffect: {fileID: 1781199061348186}
   poisonFire: {fileID: 1459319619629200}
+  wind: 0
   unit: 2
   unitstate: 0
 --- !u!114 &114083587565736550
@@ -16424,7 +16426,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 52a9bd4e4ed41d94ab00206197378dc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

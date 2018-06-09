@@ -138,7 +138,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.29, y: 1, z: 1}
+  m_Size: {x: 2.29, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114484762423794984
 MonoBehaviour:
@@ -154,13 +154,19 @@ MonoBehaviour:
   enemy: {fileID: 0}
   player: {fileID: 0}
   hillUnits: []
+  b_skillAtk: 10
   skillAtk: 10
-  comet: {fileID: 0}
+  comet:
+  - {fileID: 0}
+  bc: {fileID: 0}
   speed: 0
+  b_stunTime: 0
   stunTime: 0
   numberOfTimes: 0
   skillCost: 0
   iceberg: {fileID: 0}
+  aoeTargets: []
+  lV: 0
   skills: 2
 --- !u!212 &212122429855512144
 SpriteRenderer:

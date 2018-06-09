@@ -43,6 +43,7 @@ public class UnitController : MonoBehaviour {
     public GameObject sternEffect;
     private bool doting = false;
     public GameObject poisonFire;
+    public bool wind = false;
 
 
 
@@ -160,7 +161,7 @@ public class UnitController : MonoBehaviour {
                 if (dropSoul != null)
                 {
                     Instantiate(dropSoul, transform.position, transform.rotation);
-                    MoneyManager.inStance.AssaGoldDeuck();
+                    MoneyManager.inStance.AssaSoulDeuck();
                     dropSoul = null;
                 }
 
@@ -205,11 +206,16 @@ public class UnitController : MonoBehaviour {
                     {
                         sternEffect.SetActive(true);
                         stateTime += Time.deltaTime;
+                        if(wind == true)
+                        {
+                            gameObject.transform.Translate(1 * Time.deltaTime, 0, 0);
+                        }
                         if(stateTime>idleStateMaxTime)
                         {
                             stateTime = 0;
                             unitstate = UNITSTATE.IDLE;
                             stun = false;
+                            wind = false;
                         }
 
                     }
@@ -293,6 +299,7 @@ public class UnitController : MonoBehaviour {
                                           
                                             stateTime = 0;
                                             look[0].GetComponent<Castle>().hp -= atk;
+                                            Instantiate(effect[0], effect[0].transform.position = new Vector3(look[0].GetComponent<Castle>().transform.position.x, look[0].GetComponent<Castle>().transform.position.y, look[0].GetComponent<Castle>().transform.position.z - 1),transform.rotation);
 
                                         }
                                     }
@@ -337,6 +344,7 @@ public class UnitController : MonoBehaviour {
 
                                             stateTime = 0;
                                             look[0].GetComponent<PlayerController>().hp -= atk;
+                                            Instantiate(effect[0], effect[0].transform.position = new Vector3(look[0].GetComponent<PlayerController>().transform.position.x, look[0].GetComponent<PlayerController>().transform.position.y, look[0].GetComponent<PlayerController>().transform.position.z),transform.rotation );
 
                                             //float distance = Vector3.Distance(sensor.GetComponent<PlayerSensor>().playerPos.position, sensor.transform.position);
 
@@ -376,6 +384,7 @@ public class UnitController : MonoBehaviour {
 
                             stateTime += Time.deltaTime;
                             anime.SetBool("Attack", true);
+
                             if (sn == SomonRound[0])
                             {
                                 if (stateTime > attackStateMaxTime)
@@ -628,7 +637,7 @@ public class UnitController : MonoBehaviour {
           
         if(gameObject.tag=="Player")
         {
-            //Instantiate(effect[0], transform.position, transform.rotation);
+            Instantiate(effect[0], effect[0].transform.position = new Vector3(transform.position.x, transform.position.y, - 1), transform.rotation);
             GameObject dmgValue = Instantiate(dmgcheck[0]) as GameObject;
             dmgValue.transform.position = transform.position;
             dmgValue.transform.rotation = transform.rotation;
@@ -637,7 +646,7 @@ public class UnitController : MonoBehaviour {
 
         else
         {
-           // Instantiate(effect[1], transform.position, transform.rotation);
+            Instantiate(effect[0], effect[0].transform.position = new Vector3(transform.position.x, transform.position.y, -1), transform.rotation);
             GameObject dmgValue = Instantiate(dmgcheck[1]) as GameObject;
             dmgValue.transform.position = transform.position;
             dmgValue.transform.rotation = transform.rotation;
