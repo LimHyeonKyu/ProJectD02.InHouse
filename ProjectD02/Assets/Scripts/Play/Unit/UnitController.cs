@@ -299,7 +299,7 @@ public class UnitController : MonoBehaviour {
                                           
                                             stateTime = 0;
                                             look[0].GetComponent<Castle>().hp -= atk;
-                                            Instantiate(effect[0], effect[0].transform.position = new Vector3(look[0].GetComponent<Castle>().transform.position.x, look[0].GetComponent<Castle>().transform.position.y, look[0].GetComponent<Castle>().transform.position.z - 1),transform.rotation);
+                                            Instantiate(effect[1], effect[1].transform.position = new Vector3(look[0].GetComponent<Castle>().transform.position.x, look[0].GetComponent<Castle>().transform.position.y, look[0].GetComponent<Castle>().transform.position.z - 1),transform.rotation);
 
                                         }
                                     }
@@ -474,18 +474,25 @@ public class UnitController : MonoBehaviour {
                                 if (look[0] != null)
                                 {
                                     stateTime += Time.deltaTime;
-                                    anime.SetBool("Attack", true);
+                                   
 
                                     if (look[0].tag == "Enemy")
                                     {
+                                        anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
-
                                             stateTime = 0;
-                                         
+                                            
                                             Bullets.GetComponent<SkillController>().atk = atk;
                                             Bullets.GetComponent<SkillController>().lv = lv;
-                                            Instantiate(Bullets, transform.position, transform.rotation);
+                                            if (Bullets.name != "Guardian_Skill")
+                                            {
+                                                Instantiate(Bullets, transform.position, transform.rotation);
+                                            }
+                                            if(Bullets.name== "Guardian_Skill")
+                                            {
+                                                Instantiate(Bullets, Bullets.transform.position=new Vector3(transform.position.x+0.71f,transform.position.y+0.24f,transform.position.z+0.3f), Bullets.transform.rotation);
+                                            }
                                        
                                          
                                          
@@ -529,10 +536,10 @@ public class UnitController : MonoBehaviour {
                                 if (look[0] != null)
                                 {
                                     stateTime += Time.deltaTime;
-                                    anime.SetBool("Attack", true);
 
                                     if (look[0].tag == "Player")
                                     {
+                                        anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
                                             stateTime = 0;
